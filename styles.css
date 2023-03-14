@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+:root {
+    --text-colour-main: #000;
+    --text-colour-highlight : #aaa;
+    --button-colour: #5342b6;
+    --basket-colour-empty: #aaa;
+    --basket-colour-full: #5342b6;
+    --basket-colour-counter: #fff;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -7,5 +18,67 @@ html {
 }
 
 body {
-    font-family: Helvetica,serif;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--text-colour-main);
+}
+
+header {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    font-size: 1.6rem;
+    margin: 0;
+}
+
+h1>.logo__text {
+    color: var(--text-colour-highlight);
+}
+
+.basket {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.basket__icon {
+    width: 1.6rem;
+}
+
+.basket__item-count {
+    display: inline-block;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--basket-colour-counter);
+    background-color: var(--basket-colour-empty);
+    border-radius: 50%;
+    width: 1.6rem;
+    height: 1.6rem;
+    line-height: 1.6rem;
+}
+
+.center {
+    margin: auto;
+}
+.horiz-space-small > *+*{
+    margin-left: 1rem;
+}
+
+/* 
+Set all 'width-<size>' CSS classes to 95% of screen width by default
+e.g. .width-small, .width-medium, .width-large ...
+*/
+[class*="width-"] {
+    max-width: 95%;
+}
+
+/* Set up width primitives for larger viewports */
+@media only screen and (min-width: 768px) {
+    .width-xlarge {
+        max-width: 60rem;
+    }
 }
