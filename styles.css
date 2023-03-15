@@ -25,6 +25,7 @@ body {
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: 100;
     color: var(--text-colour-main);
+    letter-spacing: -0.03rem;
 }
 
 header {
@@ -72,6 +73,30 @@ h1>.logo__text {
     line-height: var(--item-count-size);
 }
 
+.product__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.4rem;
+    flex-wrap: wrap;
+}
+
+.product__container > * {
+    flex: 1;
+}
+
+.product__image--large {
+    min-width: 20rem;
+    max-height: 75vh;
+    width: auto;
+}
+
+.product__details {
+    min-width: 20rem;
+}
+
+/* Layout primitives */
 .center {
     margin: auto;
 }
@@ -80,13 +105,18 @@ h1>.logo__text {
     margin-left: 0.5rem;
 }
 
-.stack-medium > *+* {
+.stack-medium>*+* {
     margin-top: 1rem;
 }
 
-.vert-space-around {
+.vert-space-medium {
     padding-top: 1.4rem;
     padding-bottom: 1.4rem;
+}
+
+.vert-space-xlarge {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
 .horiz-divider-small {
