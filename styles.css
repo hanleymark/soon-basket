@@ -88,8 +88,9 @@ h1>.logo__text {
 
 .product__image--large {
     min-width: 20rem;
-    max-height: 75vh;
+    /* max-height: 75vh; */
     width: auto;
+    height: auto;
 }
 
 .product__details {
