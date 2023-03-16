@@ -1,5 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400&display=swap');
+
+:root {
+    --text-colour-main: #000;
+    --text-colour-highlight: #aaa;
+    --button-colour-active: #5342b6;
+    --button-colour-inactive: #aaa;
+    --basket-colour-empty: #aaa;
+    --basket-colour-full: #5342b6;
+    --basket-colour-counter: #fff;
+    --divider-colour: #aaa;
+}
+
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html {
@@ -7,5 +22,125 @@ html {
 }
 
 body {
-    font-family: Helvetica,serif;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 100;
+    color: var(--text-colour-main);
+    letter-spacing: -0.03rem;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+h1>.logo__text {
+    color: var(--text-colour-highlight);
+}
+
+.basket {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.basket__icon {
+    width: 1.4rem;
+}
+
+.basket__item-count {
+    --item-count-size: 1.6rem;
+    display: inline-block;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--basket-colour-counter);
+    background-color: var(--basket-colour-empty);
+    border-radius: 50%;
+    width: var(--item-count-size);
+    height: var(--item-count-size);
+    line-height: var(--item-count-size);
+}
+
+.product__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 1.4rem;
+    flex-wrap: wrap;
+}
+
+.product__container > * {
+    flex: 1;
+}
+
+.product__image--large {
+    min-width: 20rem;
+    max-width:fit-content;
+    width: auto;
+    height: auto;
+    max-height: 75vh;
+}
+
+.product__details {
+    min-width: 20rem;
+    font-size: 1.1rem;
+}
+
+/* Layout primitives */
+.center {
+    margin: auto;
+}
+
+.horiz-spacer-small>*+* {
+    margin-left: 0.5rem;
+}
+
+.stack-large>*+* {
+    margin-top: 2rem;
+}
+
+.vert-space-medium {
+    padding-top: 1.4rem;
+    padding-bottom: 1.4rem;
+}
+
+.vert-space-xlarge {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.horiz-divider-small {
+    border-bottom: var(--divider-colour) 1px solid;
+}
+
+/* 
+Set all 'width-<size>' CSS classes to 95% of screen width by default
+e.g. .width-small, .width-medium, .width-large ...
+*/
+[class*="width-"] {
+    max-width: 100vw;
+}
+
+/* Set up width primitives for larger viewports */
+@media only screen and (min-width: 768px) {
+    .width-xlarge {
+        max-width: 95vw;
+    }
+
+    .product__container {
+        justify-content:space-between;
+    }
 }
