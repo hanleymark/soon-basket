@@ -41,7 +41,7 @@ h1 {
 }
 
 h2 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 400;
 }
 
@@ -76,7 +76,7 @@ h1>.logo__text {
 .product__container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-start;
     gap: 1.4rem;
     flex-wrap: wrap;
@@ -96,6 +96,7 @@ h1>.logo__text {
 
 .product__details {
     min-width: 20rem;
+    font-size: 1.1rem;
 }
 
 /* Layout primitives */
@@ -107,8 +108,8 @@ h1>.logo__text {
     margin-left: 0.5rem;
 }
 
-.stack-medium>*+* {
-    margin-top: 1rem;
+.stack-large>*+* {
+    margin-top: 2rem;
 }
 
 .vert-space-medium {
@@ -137,5 +138,9 @@ e.g. .width-small, .width-medium, .width-large ...
 @media only screen and (min-width: 768px) {
     .width-xlarge {
         max-width: 95vw;
+    }
+
+    .product__container {
+        justify-content:space-between;
     }
 }

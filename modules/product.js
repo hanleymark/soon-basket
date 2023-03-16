@@ -14,13 +14,20 @@ export class Product {
         return `${baseUrl}${this.id}.jpg`;
     }
 
+    get priceFormatted() {
+        return this.price.toFixed(2);
+    }
+
     get htmlContent() {
-        return `
+        let html = `
             <img class='product__image--large' src='${this.imageUrl}'/>
-            <div class="product__details stack-medium">
+            <div class="product__details stack-large">
                 <h2>${this.title}</h2>
                 <p>${this.description}</p>
+                <p class='product__price'>£${this.priceFormatted}</p>
             </div>
             `;
+
+            return html;
     }
 }
