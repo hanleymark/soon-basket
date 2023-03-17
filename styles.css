@@ -175,6 +175,24 @@ a:hover .line-minus {
     pointer-events: none;
 }
 
+#user-message {
+    font-size: 1.4rem;
+    position: relative;
+    background-color: #222;
+    width: fit-content;
+    height: fit-content;
+    margin: 20px auto;
+    color: #fff;
+    opacity: 60%;
+    border-radius: 12px;
+    padding: 15px 20px;
+    text-align: center;
+    top: -45vh;
+    display: none;
+    transition: all 0.8s;
+    z-index: 99;
+}
+
 /* Layout primitives */
 .center {
     margin: auto;
