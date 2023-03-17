@@ -17,7 +17,7 @@ const allProducts = [];
 for (let data of sampleProductData) {
   const { id, price, title, description } = data;
   // Generate random in-stock quantity
-  const units = Math.floor(Math.random() * 5);
+  const units = Math.floor(Math.random() * 10) + 1;
   allProducts.push(new Product(id, price, title, description, units));
 }
 

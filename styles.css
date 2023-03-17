@@ -1,10 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&display=swap');
 
 :root {
     --text-colour-main: #000;
     --text-colour-highlight: #aaa;
+    --text-colour-alternative: #777;
     --button-colour-active: #5342b6;
     --button-colour-inactive: #aaa;
+    --button-colour-highlight: #fff;
     --basket-colour-empty: #aaa;
     --basket-colour-full: #5342b6;
     --basket-colour-counter: #fff;
@@ -23,7 +25,7 @@ html {
 
 body {
     font-family: 'Noto Sans JP', sans-serif;
-    font-weight: 100;
+    font-weight: 300;
     color: var(--text-colour-main);
     letter-spacing: -0.03rem;
 }
@@ -96,6 +98,51 @@ h1>.logo__text {
 .product__details {
     min-width: 20rem;
     font-size: 1.1rem;
+    line-height: 1.75rem;
+}
+
+.product__controls {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 140px;
+    height: 40px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#product-price {
+    user-select: none;
+}
+
+#add-to-basket-counter {
+    color: var(--button-colour-active);
+    height: fit-content;
+    user-select: none;
+}
+
+#add-to-basket-plus, #add-to-basket-minus {
+    transform: translateY(7%);
+}
+
+a:hover {
+    cursor: pointer;
+}
+a:hover .circle-plus,
+a:hover .circle-minus {
+    fill: var(--button-colour-active);
+}
+
+a:hover .line-plus,
+a:hover .line-minus {
+    stroke: var(--button-colour-highlight);
+}
+
+#product-stock {
+    font-size: 0.8rem;
+    letter-spacing: 0.2rem;
+    color: var(--text-colour-alternative);
+    user-select: none;
 }
 
 /* Layout primitives */
