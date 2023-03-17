@@ -36,6 +36,8 @@ product.populateDescription(descriptionElement);
 product.populatePrice(priceElement);
 product.populateStock(stockElement);
 
+setTimeout(() => {displayMessage("Hit refresh to view a different product");}, 1000);
+
 // Set up event handlers
 plusButton.addEventListener("click", (event) => {
     if (+addToBasketCounter.textContent < product.units) {
@@ -87,4 +89,14 @@ function checkStockForCurrentProduct() {
     else {
         addToBasketButton.classList.remove("button__inactive");
     }
+}
+
+function displayMessage(message) {
+    const messageBox = document.querySelector("#user-message");
+    messageBox.innerHTML = message;
+    messageBox.style.display = "block";
+
+    setTimeout(() => {
+        messageBox.style.display = "none";
+    }, 2000);
 }
