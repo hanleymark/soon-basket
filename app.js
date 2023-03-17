@@ -68,7 +68,6 @@ function updateBasketQuantity() {
     const itemCount = basket.reduce((total, item) => total + item.units, 0);
     basketItemCount.textContent = itemCount;
     product.populateStock(stockElement);
-    console.log(JSON.stringify(basket));
     addToBasketCounter.textContent = 1;
 
     if (+basketItemCount.textContent > 0) {

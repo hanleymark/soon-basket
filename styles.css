@@ -88,19 +88,18 @@ h1>.logo__text {
     flex-wrap: wrap;
 }
 
-.product__container > * {
+.product__container>* {
     flex: 1;
 }
 
 .product__image--large {
-    max-width:fit-content;
+    max-width: fit-content;
     width: auto;
     height: auto;
     max-height: 75vh;
 }
 
 .product__details {
-    min-width: 20rem;
     font-size: 1.1rem;
     line-height: 1.75rem;
 }
@@ -132,6 +131,7 @@ h1>.logo__text {
 a:hover {
     cursor: pointer;
 }
+
 a:hover .circle-plus,
 a:hover .circle-minus {
     fill: var(--button-colour-active);
@@ -153,7 +153,8 @@ a:hover .line-minus {
     width: 9rem;
     height: 2.3rem;
     background-color: var(--button-colour-active);
-    border: solid 1px var(--button-colour-active);;
+    border: solid 1px var(--button-colour-active);
+    ;
     border-radius: 2rem;
     font-family: inherit;
     letter-spacing: 0.05rem;
@@ -171,7 +172,6 @@ a:hover .line-minus {
     background-color: var(--button-colour-inactive);
     color: var(--button-colour-highlight);
     border-color: var(--button-colour-inactive);
-    cursor: not-allowed;
     pointer-events: none;
 }
 
@@ -217,6 +217,6 @@ e.g. .width-small, .width-medium, .width-large ...
     }
 
     .product__container {
-        justify-content:space-between;
+        justify-content: space-between;
     }
 }
