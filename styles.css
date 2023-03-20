@@ -45,6 +45,7 @@ h1 {
 h2 {
     font-size: 2rem;
     font-weight: 400;
+    line-height: normal;
 }
 
 h1>.logo__text {
@@ -97,6 +98,7 @@ h1>.logo__text {
     width: auto;
     height: auto;
     max-height: 75vh;
+    object-fit: contain;
 }
 
 .product__details {
@@ -225,13 +227,13 @@ Set all 'width-<size>' CSS classes to 95% of screen width by default
 e.g. .width-small, .width-medium, .width-large ...
 */
 [class*="width-"] {
-    max-width: 100vw;
+    max-width: 96vw;
 }
 
 /* Set up width primitives for larger viewports */
 @media only screen and (min-width: 768px) {
     .width-xlarge {
-        max-width: 95vw;
+        max-width: 90vw;
     }
 
     .product__container {
